@@ -1,0 +1,18 @@
+
+Contexto:
+Pizza-shop é um sistema de delivery de Pizzas inovador: você escolhe os sabores e o sistema se encarrega de
+ comprar as pizzas em famosas pizzarias da cidade: a Pizza Hot e a Damenos Pizza. Para tal, o pizza-shop possui
+ integração com a base de pizzas e preços desses dessas duas pizzarias. Além dos pedidos tradicionais, é possível
+ adicionar opções extras, tais como borda recheada, massa pan e queijo extra, o que irá resultar em acréscimos ao preço.
+ Além disso, será possível adicionar um cupom que irá resultar em um desconto no preço.
+
+
+No repositório há várias dicas do que precisa ser feito (procure pelos 'TODO'), incluindo:
+
+1. Implementar o padrão Decorator para que chamada do método orderPizza de PizzaShopService receba apenas a pizza como parâmetro. As opções extras devem ser implementadas como Decoretor.
+2. Implementar o padrão Proxy criando proxies de cache para guardar a lista de pizzas de cada pizzaria e chamar o proxy ao invés do serviço na classe PizzaShopService
+3. Implementar o padrão Adapter para unificar os métodos getPizzasDamenos() e getPizzasPizzaHot() em um único getPizzas() na classe PizzaShopService
+
+
+* Bônus: a implementação do padrão adapter já foi parcialmente feita, com a criação dos adaptadores DamenosAdapter e PizzahotAdapter.
+Resta apenas a implementação do metódo getPizzas() na classe PizzaShopService que deverá instanciar esses adapters para corretamente converter os itens em um conjunto único de objetos Pizza.
